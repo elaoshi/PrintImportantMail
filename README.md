@@ -18,7 +18,7 @@ website. For Windows you also have to install pywin32 (win32api is the same).
 If you have installed everything correctly you should be able to start
 the program by typing the following in the cmd:
 
-  python ReceiveMail.py
+    python ReceiveMail.py
 
 *Note: You have to switch to the correct directory first and you will not be
 able to close the cmd while running the application.*
