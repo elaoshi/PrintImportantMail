@@ -54,3 +54,5 @@ This is needed for retreiving messages from the server.
 - IDENTIFIER: This is the identifier that is used for printing your mails. If
 this is in the subject of any email (capitalization does not matter) the content
 of that mail will be sent directly to your printer.
+- UPDATE INTERVAL: The amount of minutes the application will wait until
+searching for new mails. This cannot be smaller than 1.

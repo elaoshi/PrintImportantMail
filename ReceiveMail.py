@@ -6,15 +6,21 @@ from PrintMail import printmail
 from email import parser
 
 # Setup connection details and identifier (identifier in lowercase!)
-identifier = 'wichtig'
+identifier = ''
 emailsprinted = []
 subjectArray = []
-sleepTimeSec = 5 * 60
+sleepTimeSec = 60
+
+pop_conn_server = raw_input("POP3 SERVER: ")
+pop_conn_username = raw_input("MAIL ADDRESS: ")
+pop_conn_password = raw_input("PASSWORD: ")
+identifier = raw_input("IDENTIFIER: ").lower()
+sleepTimeSec = sleepTimeSec * input("UPDATE INTERVAL: ")
 
 while True:
-    pop_conn = poplib.POP3_SSL('pop.1und1.de')
-    pop_conn.user('christian@juergen-duerr.de')
-    pop_conn.pass_('foay6600')
+    pop_conn = poplib.POP3_SSL(pop_conn_server)
+    pop_conn.user(pop_conn_username)
+    pop_conn.pass_(pop_conn_password)
 
     # Displaying current status
     print "Searching for new messages..."
